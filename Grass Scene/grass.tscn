@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw8few1twvtp0"]
+
+[ext_resource type="Texture2D" uid="uid://dkqhcsef247qn" path="res://Grass Textures/Grass/Grass_08-128x128.png" id="1_qlc0o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wygr"]
+cull_mode = 2
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 2
+disable_ambient_light = true
+disable_fog = true
+albedo_texture = ExtResource("1_qlc0o")
+albedo_texture_force_srgb = true
+albedo_texture_msdf = true
+metallic_specular = 0.0
+uv1_triplanar = true
+
+[node name="Grass" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63586, 0.128582, -30.4001)
+use_collision = true
+size = Vector3(351.784, 0.1, 39.1996)
+material = SubResource("StandardMaterial3D_2wygr")

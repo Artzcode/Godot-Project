@@ -1,0 +1,152 @@
+[gd_scene load_steps=18 format=3 uid="uid://b744m5tcjmxp4"]
+
+[ext_resource type="Shader" uid="uid://ca7e1hsraiycp" path="res://Shader de UI/psxlowgraphic.gdshader" id="1_imwk5"]
+[ext_resource type="Shader" uid="uid://b50krl7vb2jra" path="res://Shaders Graficos/EffectBordcamera.gdshader" id="2_g5tfe"]
+[ext_resource type="Shader" uid="uid://3iijpk4rtasx" path="res://Shaders Graficos/Distroç.gdshader" id="3_ixm4b"]
+[ext_resource type="Shader" uid="uid://752texu3oxx4" path="res://Shaders Graficos/shaderjpg.gdshader" id="4_cqpro"]
+[ext_resource type="AudioStream" uid="uid://whw2ufcgc1g2" path="res://MusisAmbient/Image.wav" id="5_hdne0"]
+[ext_resource type="PackedScene" uid="uid://ck3cimvegjrds" path="res://Scenes/Character.tscn" id="6_cc6sp"]
+[ext_resource type="PackedScene" uid="uid://08odma0pbn8i" path="res://City/CITY.tscn" id="9_g4bnc"]
+[ext_resource type="PackedScene" uid="uid://cwh7xhpv8xwx" path="res://Arvores/Arvore 1.tscn" id="9_hdne0"]
+[ext_resource type="PackedScene" uid="uid://nbcffuq01uyv" path="res://Arvores/Arvore 2.tscn" id="10_weq3x"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g5tfe"]
+
+[sub_resource type="Sky" id="Sky_ixm4b"]
+sky_material = SubResource("ProceduralSkyMaterial_g5tfe")
+process_mode = 3
+
+[sub_resource type="Environment" id="Environment_cqpro"]
+background_mode = 2
+sky = SubResource("Sky_ixm4b")
+tonemap_mode = 3
+ssao_enabled = true
+ssao_radius = 1.15
+ssao_intensity = 2.08
+ssao_detail = 5.0
+ssil_enabled = true
+adjustment_enabled = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jard6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imwk5"]
+shader = ExtResource("1_imwk5")
+shader_parameter/shake = 0.015
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.001
+shader_parameter/offsetIntensity = 0.0
+shader_parameter/colorOffsetIntensity = 0.2
+shader_parameter/pixelSize = 642.883
+shader_parameter/grainIntensity = 0.04
+shader_parameter/overlay_texture = SubResource("CompressedTexture2D_jard6")
+shader_parameter/use_overlay = true
+shader_parameter/use_lens_distortion = true
+shader_parameter/overlay_color = Color(0, 0, 0, 0.529412)
+shader_parameter/lens_distortion_strength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5tfe"]
+render_priority = 0
+shader = ExtResource("2_g5tfe")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/is_perspective_camera = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ixm4b"]
+shader = ExtResource("3_ixm4b")
+shader_parameter/fish_intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cqpro"]
+shader = ExtResource("4_cqpro")
+shader_parameter/alpha = 0.0
+shader_parameter/scale = 0.0
+shader_parameter/border_mask = 2.0
+shader_parameter/strength = 13.48
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cqpro")
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="SHADERSPASTE" type="Node3D" parent="."]
+
+[node name="PSX INSPIRED GRAPHYCS" type="CanvasLayer" parent="SHADERSPASTE"]
+
+[node name="PSX" type="ColorRect" parent="SHADERSPASTE/PSX INSPIRED GRAPHYCS"]
+material = SubResource("ShaderMaterial_imwk5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BORD" type="CanvasLayer" parent="SHADERSPASTE"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="SHADERSPASTE/BORD"]
+material = SubResource("ShaderMaterial_g5tfe")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SHADERSPASTE"]
+
+[node name="ColorRect" type="ColorRect" parent="SHADERSPASTE/CanvasLayer"]
+material = SubResource("ShaderMaterial_ixm4b")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="SHADERSPASTE"]
+
+[node name="ColorRect" type="ColorRect" parent="SHADERSPASTE/CanvasLayer2"]
+material = SubResource("ShaderMaterial_cqpro")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ambiencesounds" type="Node3D" parent="."]
+
+[node name="Image" type="AudioStreamPlayer" parent="Ambiencesounds"]
+stream = ExtResource("5_hdne0")
+pitch_scale = 0.82
+
+[node name="Assents" type="Node3D" parent="."]
+
+[node name="House" parent="Assents" instance=ExtResource("9_g4bnc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.628143, 0)
+
+[node name="AssentsArvores" type="Node3D" parent="."]
+visible = false
+
+[node name="Arvore 1" parent="AssentsArvores" instance=ExtResource("9_hdne0")]
+transform = Transform3D(0.975535, 0, -0.219846, 0, 1, 0, 0.219846, 0, 0.975535, 13.6868, 0, 15.0077)
+
+[node name="tree01" parent="AssentsArvores" instance=ExtResource("10_weq3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0813, 0, 17.0071)
+
+[node name="Player" parent="." instance=ExtResource("6_cc6sp")]
+transform = Transform3D(0.997948, 0, -0.0640272, 0, 1, 0, 0.0640272, 0, 0.997948, 5.48091, 0.19209051, 18.979855)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13793, 1.94537, 25.7204)
+use_collision = true
+size = Vector3(3.5918, 0.165833, 9.55273)

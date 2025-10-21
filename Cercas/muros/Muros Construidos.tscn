@@ -1,0 +1,155 @@
+[gd_scene load_steps=9 format=4 uid="uid://bscuu1kfo8nub"]
+
+[ext_resource type="PackedScene" uid="uid://dgcpg4vyu6otx" path="res://Cercas/muros/Fences/brick_fence/brick_wall_one_overhang.glb" id="1_gciqk"]
+[ext_resource type="Texture2D" uid="uid://bse6miilit07m" path="res://Cercas/muros/Fences/brick_fence/brick_wall_one_overhang_brick_wall.jpg" id="2_vbcj5"]
+[ext_resource type="Texture2D" uid="uid://bv2nb2hb6gsqb" path="res://Cercas/muros/Fences/brick_fence/brick_wall_one_overhang_concrete_bare.jpg" id="3_ygd3q"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sw5rk"]
+data = PackedVector3Array(0, 0, 0.1, 4, 0, -0.1, 0, 0, -0.1, 0, 0, 0.1, 4, 0, 0.1, 4, 0, -0.1, 0, 2, 0.1, 4, 2, 0.1, 4, 2, 0.1, 4, 2, 0.1, 4, 2, 0.1, 4, 2, -0.1, 4, 2, 0.1, 4, 2, -0.1, 4, 2, -0.1, 0, 2, 0.1, 0, 2, 0.1, 4, 2, 0.1, 0, 2, -0.1, 0, 2, 0.1, 0, 2, 0.1, 4, 2, 0.1, 4, 2, -0.1, 4, 2, -0.1, 4, 2, 0.1, 4, 2, 0.1, 4, 2, -0.1, 0, 2, 0.1, 4, 2, 0.1, 4, 2, 0.1, 4, 2, -0.1, 4, 2, -0.1, 0, 2, -0.1, 0, 2, 0.1, 0, 2, 0.1, 4, 2, 0.1, 4, 2, -0.1, 4, 2, -0.1, 0, 2, -0.1, 4, 2, -0.1, 0, 2, -0.1, 0, 2, -0.1, 4, 2, -0.1, 0, 2, -0.1, 0, 2, -0.1, 0, 2, -0.1, 0, 2, -0.1, 0, 2, 0.1, 0, 2, -0.1, 0, 2, -0.1, 0, 2, 0.1, 0, 2, -0.1, 0, 2, 0.1, 0, 2, 0.1, 4, 0, -0.1, 0, 2, -0.1, 0, 0, -0.1, 4, 0, -0.1, 4, 2, -0.1, 0, 2, -0.1, 0, 0, 0.1, 4, 2, 0.1, 4, 0, 0.1, 0, 0, 0.1, 0, 2, 0.1, 4, 2, 0.1, 4, 0, 0.1, 4, 2, -0.1, 4, 0, -0.1, 4, 0, 0.1, 4, 2, 0.1, 4, 2, -0.1, 0, 0, -0.1, 0, 2, 0.1, 0, 0, 0.1, 0, 0, -0.1, 0, 2, -0.1, 0, 2, 0.1, 4, 2, 0.1, 4.0485, 2, -0.1485, 4, 2, -0.1, 4, 2, 0.1, 4.0485, 2, 0.1485, 4.0485, 2, -0.1485, 4.0485, 2, -0.1485, 0, 2.0365, -0.1485, 0, 2, -0.1511, 4.0485, 2, -0.1485, 4.0485, 2.0365, -0.1485, 0, 2.0365, -0.1485, 4, 2, -0.1, 0, 2, -0.1511, 0, 2, -0.1, 4, 2, -0.1, 4.0485, 2, -0.1485, 0, 2, -0.1511, 0, 2, 0.1, 4.0485, 2, 0.1485, 4, 2, 0.1, 0, 2, 0.1, 0, 2, 0.1459, 4.0485, 2, 0.1485, 4.0485, 2.0365, 0.1485, 4.0485, 2.0811, -0.039, 4.0485, 2.0365, -0.1485, 4.0485, 2.0365, 0.1485, 4.0485, 2.0811, 0.039, 4.0485, 2.0811, -0.039, 0, 2, 0.1459, 4.0485, 2.0365, 0.1485, 4.0485, 2, 0.1485, 0, 2, 0.1459, 0, 2.0365, 0.1485, 4.0485, 2.0365, 0.1485, 4.0485, 2, 0.1485, 4.0485, 2.0365, -0.1485, 4.0485, 2, -0.1485, 4.0485, 2, 0.1485, 4.0485, 2.0365, 0.1485, 4.0485, 2.0365, -0.1485, 0, 2.0811, 0.039, 4.0485, 2.0811, -0.039, 4.0485, 2.0811, 0.039, 0, 2.0811, 0.039, 0, 2.0811, -0.039, 4.0485, 2.0811, -0.039, 0, 2.0365, -0.1485, 0, 2.0811, 0.039, 0, 2.0365, 0.1485, 0, 2.0365, -0.1485, 0, 2.0811, -0.039, 0, 2.0811, 0.039, 4.0485, 2.0365, -0.1485, 0, 2.0811, -0.039, 0, 2.0365, -0.1485, 4.0485, 2.0365, -0.1485, 4.0485, 2.0811, -0.039, 0, 2.0811, -0.039, 0, 2.0365, 0.1485, 4.0485, 2.0811, 0.039, 4.0485, 2.0365, 0.1485, 0, 2.0365, 0.1485, 0, 2.0811, 0.039, 4.0485, 2.0811, 0.039, 0, 2, 0.1, 0, 2.0365, 0.1485, 0, 2, 0.1459, 0, 2, -0.1, 0, 2.0365, 0.1485, 0, 2, 0.1, 0, 2.0365, 0.1485, 0, 2, -0.1, 0, 2, -0.1511, 0, 2.0365, 0.1485, 0, 2, -0.1511, 0, 2.0365, -0.1485)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqxxk"]
+resource_name = "brick"
+cull_mode = 2
+albedo_texture = ExtResource("2_vbcj5")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxh6k"]
+resource_name = "concrete"
+cull_mode = 2
+albedo_texture = ExtResource("3_ygd3q")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w4wi5"]
+_surfaces = [{
+"aabb": AABB(0, 0, -0.1, 4, 2, 0.2),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQAEAAIAAgAFAAAAAgAEAAUAAAAGAAMAAAAFAAYAAwAHAAEAAQAHAAQAAwAGAAcABAAFAAUABQAGAAYABAAEAAUABQAGAAYABAAEAAUABgAGAAcABwAEAAQABwAEAAQABwAHAAQABwAHAAQABAAFAAUABQAFAAYABQAFAAYABgAGAAcABgAHAAcABgAHAAcA"),
+"name": "brick",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAA//8AAP//AAAAAP//AAAAAAAA/////wAA////////AAD/////AAAAAA==")
+}, {
+"aabb": AABB(0, 2, -0.151109, 4.04853, 0.0810826, 0.299637),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABgAFAAAABgAHAAUABAAIAAYABgAIAAcACAAEAAMABwAJAAUABwAIAAkABQAKAAEABQAJAAoAAQALAAMACAADAAsAAQAKAAsACAAMAAkACgANAAsACwAOAAgACAAOAAwACwANAA4ACQAMAA8ACQAPAAoADgAPAAwACgAPAA0ADgANAA8A"),
+"name": "concrete",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("7fwAAInWAAD//wAANAIAAO38AACqKwAAAAAAAAAAAAAAAAAAqisAAP//AAD//wAAAAAAAInWAAAAAAAAyv0AAAAATXP//wAA//9Nc///AAD//01zNAIAAAAATXM0AgAA/////2OiAAAAAP//z18AAAAA//9jogAA/////89fAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p7nux"]
+resource_name = "brick_wall_one_overhang_Plane_001"
+_surfaces = [{
+"aabb": AABB(0, 0, -0.1, 4, 2, 0.2),
+"attribute_data": PackedByteArray("7kqhTv//w17uSsNe//+hTgSG94E1h0f/DYY0/kyB/v6tgk/+LIc8gcmElIH/f///cIj//zOB/39NiICAeoJpgHfs9H/RXPD/0Vz0f3fs8P937PR/0Vzw/9Fc9H937PD/d+z1f6Xz8v+l8/V/d+zy/6NV9X/RXPP/0Vz1f6NV8/8="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABgAFAAcABgAHAAgABAAJAAUACgAJAAQABQALAAcABQAMAAsACQAMAAUABwALAA0ACQAOAAwACAAHAA8ABwANAA8ACAAPAAoADwANAA4ACgAPAAkADwAOAAkAEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A"),
+"material": SubResource("StandardMaterial3D_pqxxk"),
+"name": "brick",
+"primitive": 3,
+"uv_scale": Vector4(3.56425, 2, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/vwAAAAAAAP+///8AAP///78AAP//////v/////////+//////////7//////AAD/v/////8AAP+/AAD//////78AAP//AAD/v/////8AAP+//////////78AAP//AAD/vwAA//////+/AAD//wAA/7///wAAAAD//wAA//8AAP//AAAAAAAA////////AAD//wAAAAD//////////////////wAA/////wAA//////////8AAP///z//////AAD/P///AAAAAP8//////////z8AAAAAAAD/PwAA//////8/AAAAAP///z8AAP//AAD/PwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9//3//f/9//3//f/9//3//f/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///")
+}, {
+"aabb": AABB(0, 2, -0.151109, 4.04853, 0.0810826, 0.299637),
+"attribute_data": PackedByteArray("VJ017GaeqfNUnTXyZp7B6vzuv9FEMv//oTK+z7Luqvi0q7Dy6YvU+/uLmPQArIP8j43g/JWtMfRIrQf+g4399eeUAPbcm5bk7J8A9veYleRv/xHC0TuH+2o7AdP//6H10KSo4B6QePsekKjg0KR4+5hwqseot+K3qbdMxphwQbkol836mZ2t6lyhzfrrmqzq/l3P+Er3usXA9qT01l4sr91mvf1b5ze9HeiJ+2FmCNYtlZjo4ZJ9+giTi+iCntjo5aDp6L2g2/o="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALwAtACwALQAvADAALQAwADEA"),
+"material": SubResource("StandardMaterial3D_bxh6k"),
+"name": "concrete",
+"primitive": 3,
+"uv_scale": Vector4(2.79456, 2.05374, 0, 0),
+"vertex_count": 50,
+"vertex_data": PackedByteArray("7fwAAInW/7///wAANAL/v+38AACqK/+///8AAP///7///wAANAKO/gAATXM0Ao7+AAAAAAAAjv7//01zNAKO/u38AACqK/+/AAAAAAAA/78AAAAAqiv/v///AAA0Av+/AAAAAInW/7///wAA////v+38AACJ1v+/AAAAAMr9/7///01z////v//////PX/+///9NczQC/7//////Y6L/vwAAAADK/fP///9Nc///2P///wAA///X/wAATXP///T///8AAP///////01zNAL/////AAA0Av////9Nc/////8AAP//Y6L/v//////PX/+//////2Oi/78AAP//z1//vwAATXM0Av+/AAD//2Oi/78AAE1z////vwAA///PX/+///9NczQCzP8AAP//z1/x/wAATXM0AvD//////89fyv8AAE1z//9CsP////9jokGw//9Nc///QbAAAP//Y6JCsAAAAACJ1uz/AABNc///7f8AAAAAyv3u/wAAAACqK+v/AAAAAAAA7P8AAE1zNALs/wUACoAKAPp/EgD2fwYADYDe/xuA9P/5f/T/+X/d/xuAFwAugGwAyX9uAMh/GAAvgEsA2X8WACyAFwAtgEsA2X/9fwEA/n8AAP9/AAD5fwMAxv36/8b9+//G/fv/xv36//+//3//v/9//7//f/+//3/D/x2Aw/8dgMP/HYDD/x2AAID+//9//v//f/7/AoD9/1WAUMyIsxcAirMaAFaAT8w0/R6Bx/8VgNT/EIAn/SSBCUATgAlAEoAIQBGACkAVgAlAE4AKQBSA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w4wi5")
+
+[node name="brick_wall_one_overhang2" instance=ExtResource("1_gciqk")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang2" type="Node3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00228, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang2" index="0"]
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang2/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang2/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang3" type="Node3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00079, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang3" index="0"]
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang3/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang3/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang4" type="Node3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0021, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang4" index="0"]
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang4/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang4/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang5" type="Node3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05014, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang5" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0394454, 0, 0)
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang5/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang5/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang6" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.00065, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang6" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215044, 0, 0)
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang6/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang6/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
+
+[node name="brick_wall_one_overhang7" type="Node3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0231, 0, 0)
+
+[node name="brick_wall_one_overhang" type="MeshInstance3D" parent="brick_wall_one_overhang7" index="0"]
+mesh = SubResource("ArrayMesh_p7nux")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brick_wall_one_overhang7/brick_wall_one_overhang" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brick_wall_one_overhang7/brick_wall_one_overhang/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_sw5rk")
